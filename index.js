@@ -95,18 +95,3 @@ float.addEventListener("click", () => {
     float.style.transform = "rotate(0deg)";
   }
 });
-
-let intersection = new IntersectionObserver(function (entries) {
-  if (entries[0].isIntersecting) {
-    float.style.display = 'none';
-    iPhone.style.display = 'none';
-    iWhats.style.display = 'none';
-    iMail.style.display = 'none';
-  } else {
-    float.style.display = 'block';
-    iPhone.style.display = 'block';
-    iWhats.style.display = 'block';
-    iMail.style.display = 'block';
-  }
-});
-intersection.observe(document.querySelector(".footer"));
