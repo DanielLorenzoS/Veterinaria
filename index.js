@@ -1,24 +1,26 @@
-let arrow = document.querySelector('.img-arrow');
-let header = document.querySelector	('.header');
+let arrow = document.querySelector(".img-arrow");
+let header = document.querySelector(".header");
 
-arrow.addEventListener('click', () => {
-	arrow.style.animation = 'none';
-})
+arrow.addEventListener("click", () => {
+  arrow.style.animation = "none";
+});
 
-let intersectionObserver = new IntersectionObserver(function(entries) {
-	  	if (!entries[0].isIntersecting){
-	 		arrow.style.animation = 'none';	
-	 		header.style.background = '#a6a6d6'
-	 	}else {
-	 		header.style.background = 'transparent'
-	 	}
-	});
-intersectionObserver.observe(document.querySelector('.title'));
-
+let intersectionObserver = new IntersectionObserver(function (entries) {
+  if (!entries[0].isIntersecting) {
+    arrow.style.animation = "none";
+    header.style.background = "#a6a6d6";
+  } else {
+    header.style.background = "transparent";
+  }
+});
+intersectionObserver.observe(document.querySelector(".title"));
 
 function initMap() {
   const polanco = { lat: 19.433797973738496, lng: -99.19090478692605 };
-  const chicago = new google.maps.LatLng(19.433797973738496, -99.19090478692605);
+  const chicago = new google.maps.LatLng(
+    19.433797973738496,
+    -99.19090478692605
+  );
   const map = new google.maps.Map(document.getElementById("maps"), {
     center: chicago,
     zoom: 18,
@@ -41,56 +43,55 @@ function project(latLng) {
   );
 }
 
-let btnMenu = document.querySelector('.img-menu');
-let nav = document.querySelector('.nav-res');
+let btnMenu = document.querySelector(".img-menu");
+let nav = document.querySelector(".nav-res");
 let saw = false;
-let navMenu = document.querySelector('.nav-menu');
-let navMenu2 = document.querySelector('.nav-menu2');
-let navMenu3 = document.querySelector('.nav-menu3');
+let navMenu = document.querySelector(".nav-menu");
+let navMenu2 = document.querySelector(".nav-menu2");
+let navMenu3 = document.querySelector(".nav-menu3");
 
-btnMenu.addEventListener('click', () => {
-  if (saw == false){
-    nav.style.marginTop = '8vh';
-    btnMenu.style.animation = 'push 1s alternate';
+btnMenu.addEventListener("click", () => {
+  if (saw == false) {
+    nav.style.marginTop = "8vh";
+    btnMenu.style.animation = "push 1s alternate";
     saw = true;
-  }else {
-    nav.style.marginTop = '-500px';
-    btnMenu.style.animation = 'pash 1s alternate';
+  } else {
+    nav.style.marginTop = "-500px";
+    btnMenu.style.animation = "pash 1s alternate";
     saw = false;
   }
-})
+});
 
-navMenu.addEventListener('click', () => {
-  nav.style.marginTop = '-500px';
-    saw = false;
-})
-navMenu2.addEventListener('click', () => {
-  nav.style.marginTop = '-500px';
-    saw = false;
-})
-navMenu3.addEventListener('click', () => {
-  nav.style.marginTop = '-500px';
-    saw = false;
-})
+navMenu.addEventListener("click", () => {
+  nav.style.marginTop = "-500px";
+  saw = false;
+});
+navMenu2.addEventListener("click", () => {
+  nav.style.marginTop = "-500px";
+  saw = false;
+});
+navMenu3.addEventListener("click", () => {
+  nav.style.marginTop = "-500px";
+  saw = false;
+});
 
-let float = document.querySelector('.float');
-let iPhone = document.querySelector('.fast-phone');
-let iWhats = document.querySelector('.fast-whats');
-let iMail = document.querySelector('.fast-mail');
+let float = document.querySelector(".float");
+let iPhone = document.querySelector(".fast-phone");
+let iWhats = document.querySelector(".fast-whats");
+let iMail = document.querySelector(".fast-mail");
 
-float.addEventListener('click', () => {
-  if (float.innerHTML == '+'){
-    iPhone.style.bottom = '50px'
-    iWhats.style.bottom = '110px'
-    iMail.style.bottom = '170px'
-    float.innerHTML = '^'
-    float.style.transform = 'rotate(180deg)'
+float.addEventListener("click", () => {
+  if (float.innerHTML == "+") {
+    iPhone.style.bottom = "50px";
+    iWhats.style.bottom = "110px";
+    iMail.style.bottom = "170px";
+    float.innerHTML = "^";
+    float.style.transform = "rotate(180deg)";
+  } else if (float.innerHTML == "^") {
+    iPhone.style.bottom = "-10px";
+    iWhats.style.bottom = "-10px";
+    iMail.style.bottom = "-10px";
+    float.innerHTML = "+";
+    float.style.transform = "rotate(0deg)";
   }
-  else if (float.innerHTML == '^'){
-    iPhone.style.bottom = '-10px'
-    iWhats.style.bottom = '-10px'
-    iMail.style.bottom = '-10px'
-    float.innerHTML = '+'
-    float.style.transform = 'rotate(0deg)'
-  }
-})
+});
