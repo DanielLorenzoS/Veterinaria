@@ -72,3 +72,25 @@ navMenu3.addEventListener('click', () => {
   nav.style.marginTop = '-500px';
     saw = false;
 })
+
+let float = document.querySelector('.float');
+let iPhone = document.querySelector('.fast-phone');
+let iWhats = document.querySelector('.fast-whats');
+let iMail = document.querySelector('.fast-mail');
+
+float.addEventListener('click', () => {
+  if (float.innerHTML == '+'){
+    iPhone.style.bottom = '50px'
+    iWhats.style.bottom = '110px'
+    iMail.style.bottom = '170px'
+    float.innerHTML = '^'
+    float.style.transform = 'rotate(180deg)'
+  }
+  else if (float.innerHTML == '^'){
+    iPhone.style.bottom = '-10px'
+    iWhats.style.bottom = '-10px'
+    iMail.style.bottom = '-10px'
+    float.innerHTML = '+'
+    float.style.transform = 'rotate(0deg)'
+  }
+})
