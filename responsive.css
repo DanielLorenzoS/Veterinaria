@@ -78,7 +78,7 @@
     margin: 20px;
   }
   .float {
-      z-index: 11;
+    z-index: 11;
   }
   .float,
   .fast-phone,
@@ -95,7 +95,7 @@
     cursor: pointer;
     font-size: 25px;
     color: #fff;
-    transition: .6s ease-out;
+    transition: 0.6s ease-out;
   }
   .fast-phone,
   .fast-whats,
@@ -130,8 +130,7 @@
 
   .service {
     grid-template-columns: 1fr;
-    box-shadow: 5px 4px 3px #404080;
-    /* border-bottom: 5px double #404080; */
+    box-shadow: none;
     font-size: 20px;
   }
   .img-serv {
