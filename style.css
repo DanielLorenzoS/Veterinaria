@@ -24,7 +24,7 @@ body {
 .img-menu {
 	display: none;
 }
-.nav-res {
+.nav-res, .float {
 	display: none;
 }
 .nav {
@@ -160,7 +160,6 @@ body {
 .cont-img {
 	max-width: 40px;
 	max-height: 40px;
-	/* filter: opacity(0.4) drop-shadow(#404080); */
 }
 #maps {
 	margin: 40px;
